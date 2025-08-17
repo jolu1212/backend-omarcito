@@ -1,0 +1,26 @@
+# Dependencias principales del backend Flask
+Flask==2.3.3              # Framework web principal
+Flask-CORS==4.0.0          # Manejo de CORS para requests desde Android
+openai==1.3.5              # Cliente oficial de OpenAI para GPT-4o-mini
+requests==2.31.0           # Para hacer HTTP requests a servicios externos
+python-dotenv==1.0.0       # Para cargar variables de entorno desde .env
+gunicorn==21.2.0           # Servidor WSGI para producción en Railway
+
+# Dependencias para procesamiento de archivos
+Pillow==10.0.1             # Procesamiento de imágenes
+pydub==0.25.1              # Procesamiento de audio
+speech-recognition==3.10.0 # Transcripción de audio a texto
+
+# Dependencias para base de datos y cache
+redis==5.0.1               # Cache y almacenamiento de sesiones
+psycopg2-binary==2.9.7     # Conector PostgreSQL para Railway
+
+# Dependencias para validación y seguridad
+marshmallow==3.20.1        # Validación y serialización de datos
+bcrypt==4.0.1              # Hashing de contraseñas
+PyJWT==2.8.0               # Manejo de tokens JWT
+
+# Dependencias para testing
+pytest==7.4.2             # Framework de testing
+pytest-flask==1.2.0       # Extensiones de pytest para Flask
+pytest-cov==4.1.0         # Cobertura de código en tests
