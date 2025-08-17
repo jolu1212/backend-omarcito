@@ -139,14 +139,6 @@ def log_response_info(response):
     logger.info(f"Response: {response.status_code} for {request.method} {request.url}")
     return response
 
-# Registrar blueprints de las rutas
-try:
-    from routes.chat_routes import bp_chat
-    app.register_blueprint(bp_chat)
-    logger.info("Chat routes registered successfully")
-except ImportError as e:
-    logger.warning(f"Could not import chat routes: {e}")
-
 # Endpoint para crear sesiones
 @app.route('/api/session/create', methods=['POST'])
 def crear_sesion():
@@ -194,10 +186,6 @@ def crear_sesion():
             'error': 'Error interno del servidor',
             'message': str(e)
         }), 500
-
-# Registrar más rutas aquí según sea necesario
-# from routes.training_routes import bp_training
-# app.register_blueprint(bp_training)
 
 if __name__ == '__main__':
     """
